@@ -1,0 +1,8 @@
+{
+    "amount":[
+        {"id": "usman", "price": 100 },
+        {"id": "hamza", "price": 200 },
+        {"id": "mahad", "price": 300 },
+        {"id": "subhan", "price": 400 }
+    ]
+}
