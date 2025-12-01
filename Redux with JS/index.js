@@ -1,4 +1,4 @@
-import { createStore,applyMiddleware } from "redux";
+import { createStore,applyMiddleware,combineReducers } from "redux";
 import logger from 'redux-logger'
 import axios from "axios";
 import { thunk } from "redux-thunk";
@@ -7,9 +7,12 @@ import { thunk } from "redux-thunk";
 
 const inc = 'increment'
 const dec = 'decrement'
-const store = createStore(reducer,applyMiddleware(logger.default,thunk))
+const store = createStore(combineReducers({
+    account: accountReducer,
+    bonus: bonusReducer,
+}),applyMiddleware(logger.default,thunk))
 
-function reducer(state={amount: 2},action){
+function accountReducer(state={amount: 2},action){
 
     switch (action.type) {
         case inc:
@@ -23,6 +26,17 @@ function reducer(state={amount: 2},action){
 
   
     
+}
+
+function bonusReducer(state={bonus: 0},action){
+   switch(action.type){
+     case inc:
+        return {bonus: state.bonus + 1};
+     default:
+        return state;      
+ 
+
+   }
 }
 
 store.subscribe(()=>{
@@ -57,5 +71,5 @@ function decrement(){
 
 
 setTimeout(()=>{
-    store.dispatch(increment('subhan'))
+    store.dispatch(increment('mahad'))
 },1000)
