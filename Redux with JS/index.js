@@ -39,6 +39,7 @@ function decrement(){
     return {type: dec}
 }
 
+
 // async function fetchData(){
     
 //     console.log(data);
