@@ -30,9 +30,18 @@ store.subscribe(()=>{
 
 })
 
-async function increment(dispatch,useState){
-    const {data} = await axios.get('http://localhost:3000/amount/hamza')
-    dispatch({type: inc,payload: data.price})
+// async function increment(dispatch,useState){
+//     const {data} = await axios.get('http://localhost:3000/amount/hamza')
+//     dispatch({type: inc,payload: data.price})
+// }
+
+function increment(id){
+    return async function (dispatch,useState) {
+
+        const {data} = await axios.get(`http://localhost:3000/amount/${id}`)
+        dispatch({type:inc,payload: data.price})
+          
+    }
 }
 
 function decrement(){
@@ -48,5 +57,5 @@ function decrement(){
 
 
 setTimeout(()=>{
-    store.dispatch(increment)
+    store.dispatch(increment('subhan'))
 },1000)
