@@ -5,8 +5,9 @@ import { thunk } from "redux-thunk";
 
 
 
-const inc = 'increment'
-const dec = 'decrement'
+const inc = 'amount/increment';
+const dec = 'amount/decrement';
+const incBonus = 'bonus/increment';
 const store = createStore(combineReducers({
     account: accountReducer,
     bonus: bonusReducer,
@@ -30,7 +31,10 @@ function accountReducer(state={amount: 2},action){
 
 function bonusReducer(state={bonus: 0},action){
    switch(action.type){
+     case incBonus:
+        return {bonus: state.bonus + 2};
      case inc:
+        if(action.payload > 300)
         return {bonus: state.bonus + 1};
      default:
         return state;      
@@ -62,6 +66,10 @@ function decrement(){
     return {type: dec}
 }
 
+function incrementBonus(){
+    return {type: incBonus}
+}
+
 
 // async function fetchData(){
     
@@ -70,6 +78,16 @@ function decrement(){
 // fetchData()
 
 
+// setTimeout(()=>{
+//     store.dispatch(increment('mahad'))
+// },1000)
+
+
+// setTimeout(()=>{
+//     store.dispatch(increment('subhan'))
+// },1000)
+
 setTimeout(()=>{
-    store.dispatch(increment('mahad'))
+    store.dispatch(incrementBonus())
 },1000)
+
