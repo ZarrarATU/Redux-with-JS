@@ -4,6 +4,13 @@
   padding: 2rem;
   text-align: center;
 }
+body{
+  background: #333;
+  color: white;
+}
+h4{
+  background: #000;
+}
 
 .logo {
   height: 6em;
