@@ -5,6 +5,7 @@ import {applyMiddleware, combineReducers, createStore} from 'redux'
 import accountReducer from './reducers/accountRed.js'
 import bonusReducer from './reducers/bonusRed.js'
 import {thunk} from 'redux-thunk'
+import {Provider} from 'react-redux'
 
 const store = createStore(combineReducers({
   account: accountReducer,
@@ -13,6 +14,8 @@ const store = createStore(combineReducers({
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App store={store} />
+    <Provider store={store}>
+       <App  />
+    </Provider>
   </StrictMode>,
 )

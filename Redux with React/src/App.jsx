@@ -4,19 +4,15 @@ import Bonus from './components/Bonus'
 import { useEffect, useState } from 'react';
 import { incrementByAmt } from './actions/action';
 import accountReducer from './reducers/accountRed';
+import { useSelector } from 'react-redux';
 
 
 
 function App({store}) {
-    let [account,setAccount] = useState({amount: 0});
-    let [bonus,setBonus] = useState({points: 0});
+
     
-    setTimeout(()=>{
-      // store.dispatch(incrementByAmt)
-      console.log(store.getState());
-      
-        
-    },[])
+   const amount = useSelector(state=>state.account.amount)
+   const points = useSelector(state=>state.bonus.points)
     
    
     
@@ -24,15 +20,15 @@ function App({store}) {
   return (
     <div className="main">
 
-      <h4>Current Amount: {store.getState().account.amount}</h4>
-      <h4>Total Bonus: {bonus.points}</h4>
+      <h4>Current Amount: {amount}</h4>
+      <h4>Total Bonus: {points}</h4>
 
-      <Account store={store} account={account} setAccount={setAccount}></Account>
+      <Account></Account>
       <br />
       <br />
       <br />
       <br />
-      <Bonus bonus={bonus} setBonus={setBonus}></Bonus>
+      <Bonus ></Bonus>
 
     </div>
     

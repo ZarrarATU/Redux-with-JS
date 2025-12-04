@@ -13,5 +13,5 @@ export function decrement(){
 export function incrementByAmt(dispatch,getState){
     const {data} = axios.get('http://localhost:3000/amount')
 
-   dispatch({type: dec,payload: data})
+   dispatch({type: inc,payload: data})
 }

@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 
-function Bonus({bonus,setBonus}) {
+function Bonus() {
 
-
+const points = useSelector(state=>state.bonus.points)
 
   return (
     <div>
-        <h1>Total Point: {bonus.points}</h1>
-        <button onClick={()=>setBonus((b=>{return {...b,points: b.points+1}}))} className='incPoint'>Increment</button>
+        <h1>Total Point: {points}</h1>
+        <button  className='incPoint'>Increment</button>
     </div>
   )
 }

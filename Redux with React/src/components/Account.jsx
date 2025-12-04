@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { inc } from '../actions/action'
+import { useDispatch, useSelector } from 'react-redux'
+import { incrementByAmt } from '../actions/action'
 
-function Account({account,setAccount,store}) {
+function Account() {
 
 
-
+  const amount =  useSelector(state=>state.account.amount)
+  let dispatch = useDispatch()
   
 
 
@@ -15,24 +18,18 @@ function Account({account,setAccount,store}) {
     }
 
     function handleInc(){
-        dispatch({type: inc,payload: 2000})
+       dispatch(incrementByAmt)
     }
-    function handleDec(){
-        setAccount(acc=>{return {amount: acc.amount - 1}})
-    }
-
-    function handleIncAmt(){
-        setAccount(acc=>{return {amount: acc.amount + input}})
-    }
+  
     
 
   return (
     <div>
-        <h1>Amount: {store.getState().account.amount}</h1>
+        <h1>Amounttt: {amount}-</h1>
         <button className="inc" onClick={handleInc}>Increment</button>
-        <button className="dec" onClick={handleDec}>Decrement</button>
+        <button className="dec" >Decrement</button>
         <input type="number" value={input} onChange={handleInput} />
-        <button className="incByAmt" onClick={handleIncAmt}>Increase by ${input} </button>
+        <button className="incByAmt" >Increase by ${input} </button>
     </div>
   )
 }
