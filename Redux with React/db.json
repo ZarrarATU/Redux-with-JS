@@ -1,0 +1,13 @@
+{
+    "amount":[
+        {"id": "usman", "price": 100 },
+        {"id": "hamza", "price": 200 },
+        {"id": "mahad", "price": 300 },
+        {"id": "subhan", "price": 400 }
+    ],
+    "bonus":[
+         {"id": "huzaif", "points": 499 },
+         {"id": "hunain", "points": 299 },
+         {"id": "ahad", "points": 999 }
+    ]
+}

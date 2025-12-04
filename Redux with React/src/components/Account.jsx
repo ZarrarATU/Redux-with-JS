@@ -1,6 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { inc } from '../actions/action'
 
-function Account({account,setAccount}) {
+function Account({account,setAccount,store}) {
+
+
+
+  
 
 
     let [input,setInput] = useState(0)
@@ -10,7 +15,7 @@ function Account({account,setAccount}) {
     }
 
     function handleInc(){
-        setAccount(acc=>{return {amount: acc.amount + 1}})
+        dispatch({type: inc,payload: 2000})
     }
     function handleDec(){
         setAccount(acc=>{return {amount: acc.amount - 1}})
@@ -23,7 +28,7 @@ function Account({account,setAccount}) {
 
   return (
     <div>
-        <h1>Amount: {account.amount}</h1>
+        <h1>Amount: {store.getState().account.amount}</h1>
         <button className="inc" onClick={handleInc}>Increment</button>
         <button className="dec" onClick={handleDec}>Decrement</button>
         <input type="number" value={input} onChange={handleInput} />
