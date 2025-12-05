@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 
 
 function Account() {
 
 
+  const account = useSelector(state=>state.account)
 
   
 
@@ -22,7 +24,7 @@ function Account() {
 
   return (
     <div>
-        <h1>Amounttt: {}-</h1>
+        <h1>Amounttt: {account.amount}-</h1>
         <button className="inc" onClick={handleInc}>Increment</button>
         <button className="dec" >Decrement</button>
         <input type="number" value={input} onChange={handleInput} />
