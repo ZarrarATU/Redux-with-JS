@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { increment,decrement,incByAmt } from '../Slices/accountSlice'
 
 function Account() {
 
 
   const account = useSelector(state=>state.account)
+  const dispatch = useDispatch()
 
   
 
@@ -17,7 +18,15 @@ function Account() {
     }
 
     function handleInc(){
-       
+        dispatch(increment())
+    }
+
+    function handleDec(){
+        dispatch(decrement())
+    }
+
+    function handleIncByAmt(){
+        dispatch(incByAmt(input))
     }
   
     
@@ -26,9 +35,9 @@ function Account() {
     <div>
         <h1>Amounttt: {account.amount}-</h1>
         <button className="inc" onClick={handleInc}>Increment</button>
-        <button className="dec" >Decrement</button>
+        <button className="dec" onClick={handleDec} >Decrement</button>
         <input type="number" value={input} onChange={handleInput} />
-        <button className="incByAmt" >Increase by ${input} </button>
+        <button className="incByAmt" onClick={handleIncByAmt} >Increase by ${input} </button>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import {createSlice} from '@reduxjs/toolkit'
 
 
 const init = {
-    points: 2
+    points: 3
 }
 
 export const bonusSlice = createSlice({
@@ -10,7 +10,7 @@ export const bonusSlice = createSlice({
     initialState: init,
     reducers: {
         increment: state=>{
-            state += 2
+            state.points += 2
         }
     }
 })

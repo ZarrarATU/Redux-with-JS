@@ -10,13 +10,13 @@ export const accountSlice = createSlice({
     initialState: init,
     reducers:{
         increment: state=>{
-            state.value += 299
+            state.amount += 299
         },
         decrement: state=>{
-            state.value -= 12
+            state.amount -= 12
         },
         incByAmt: (state,action)=>{
-            state.value += action.payload
+            state.amount += action.payload
         }
     }
 })
