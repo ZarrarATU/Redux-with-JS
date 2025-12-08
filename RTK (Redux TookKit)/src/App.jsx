@@ -1,14 +1,15 @@
 import './App.css'
-import Account from './components/account'
+import Account from './components/Account'
 import Bonus from './components/Bonus'
 import { useSelector } from 'react-redux'
+import Reward from './components/Reward'
 
 
 function App() {
 
   const account = useSelector(state=>state.account)
   const bonus = useSelector(state=>state.bonus)
- ;
+ 
   
   
 
@@ -24,6 +25,9 @@ function App() {
       <br />
       <br />
       <Bonus ></Bonus>
+
+      <br />
+      <Reward></Reward>
 
     </div>
     

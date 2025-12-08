@@ -1,19 +1,19 @@
 import {createSlice} from '@reduxjs/toolkit'
 
-const init = {
-    amount: 699
+
+let init = {
+    amount: 20,
 }
 
-
-export const accountSlice = createSlice({
+const accountSlice = createSlice({
     name: 'account',
     initialState: init,
     reducers:{
         increment: state=>{
-            state.amount += 299
+            state.amount += 1;
         },
         decrement: state=>{
-            state.amount -= 12
+            state.amount -= 1;
         },
         incByAmt: (state,action)=>{
             state.amount += action.payload
@@ -22,6 +22,6 @@ export const accountSlice = createSlice({
 })
 
 
-export const {increment,decrement,incByAmt} = accountSlice.actions;
 
+export const {increment,decrement,incByAmt} = accountSlice.actions;
 export default accountSlice.reducer
