@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { increment,decrement,incByAmt } from '../Slices/accountSlice'
+import { increment,decrement,incByAmt, getData } from '../Slices/accountSlice'
 
 function Account() {
 
 
   const account = useSelector(state=>state.account)
+  const pending = useSelector(state=>state.account.pending)
+  const reject = useSelector(state=>state.account.reject)
   const dispatch = useDispatch()
 
   
@@ -33,6 +35,9 @@ function Account() {
 
   return (
     <div>
+      <button onClick={e=>dispatch(getData('subhan'))}>fetch</button>
+      {pending ? <h1>Loading...</h1> : '...' }
+        <h1>{account.reject === true ? 'Rejected' : null}</h1>
         <h1>Amounttt: {account.amount}-</h1>
         <button className="inc" onClick={handleInc}>Increment</button>
         <button className="dec" onClick={handleDec} >Decrement</button>
