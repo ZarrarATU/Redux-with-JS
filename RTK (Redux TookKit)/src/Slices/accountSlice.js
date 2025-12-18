@@ -1,47 +1,22 @@
-import {createAsyncThunk,createSlice} from '@reduxjs/toolkit'
-import axios from 'axios'
+import {createSlice} from '@reduxjs/toolkit'
 
 
-let init = {
-    amount: 20,
-    pending: false,
-    reject: false
+const init = {
+    dark: false,
+    value: 1,
 }
 
-
-export const getData = createAsyncThunk('account/getData',async (id,ThunkAPI)=>{
-     const {data} = await axios.get(`http://localhost:30005/amount/${id}`);
-     return data.price
-})
-
-const accountSlice = createSlice({
+const ThemeSlice = createSlice({
     name: 'account',
     initialState: init,
-    reducers:{
-        increment: state=>{
-            state.amount += 1;
-        },
-        decrement: state=>{
-            state.amount -= 1;
-        },
-        incByAmt: (state,action)=>{
-            state.amount += action.payload
+    reducers: {
+        switchTheme: (state,action)=>{
+             state.dark = !state.dark
         }
-    },
-    extraReducers: builder=>{
-        builder.addCase(getData.fulfilled,(state,action)=>{
-              state.amount += action.payload
-              state.pending = false
-              console.log(action.payload);
-        }).addCase(getData.pending,(state,action)=>{
-              state.pending = true
-        }).addCase(getData.rejected,(state)=>{
-              state.reject = true
-        })
     }
+
 })
 
 
-
-export const {increment,decrement,incByAmt} = accountSlice.actions;
-export default accountSlice.reducer
+export const {switchTheme} = ThemeSlice.actions 
+export default ThemeSlice.reducer

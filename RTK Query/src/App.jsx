@@ -1,9 +1,14 @@
 import './App.css'
+import Admin from './components/Admin'
 
 
 function App() {
   return (
-    <div>RTK Query saar </div>
+    <div>
+      <h1> RTK Query saar</h1>
+      <br /><br /><br /><br />
+      <Admin></Admin>
+       </div>
   )
 }
 

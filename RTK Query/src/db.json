@@ -1,0 +1,10 @@
+{
+    "account": [
+        {"amount": 20, "id": "usman","status": "premium"},
+        {"amount": 293, "id": "hamza","status": "premium"},
+        {"amount": 224, "id": "mahad","status": "normal"},
+        {"amount": 254, "id": "subhan","status": "premium"},
+        {"amount": 243, "id": "huzaif","status": "normal"},
+        {"amount": 256, "id": "ahad","status": "premium"}
+    ]
+}
