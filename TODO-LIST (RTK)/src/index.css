@@ -1,0 +1,114 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* App background */
+body {
+  background: #0f172a; /* dark navy */
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  color: #e5e7eb;
+}
+
+/* App container */
+div {
+  width: 420px;
+}
+
+/* Add Todo */
+.add-todo {
+  width: 70%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e5e7eb;
+  outline: none;
+}
+
+.add-todo::placeholder {
+  color: #94a3b8;
+}
+
+.add-todo:focus {
+  border-color: #38bdf8;
+}
+
+/* Add button */
+.add {
+  padding: 12px 16px;
+  margin-left: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  background: #22c55e;
+  color: #020617;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add:hover {
+  background: #16a34a;
+}
+
+/* Todo list */
+.todos {
+  list-style: none;
+  margin-top: 25px;
+}
+
+/* Todo item */
+.todo {
+  background: #020617;
+  padding: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Todo text */
+.text {
+  flex: 1;
+  font-size: 16px;
+  color: #e5e7eb;
+}
+
+/* Buttons */
+.delete,
+.edit {
+  border: none;
+  padding: 7px 11px;
+  margin-left: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+/* Delete */
+.delete {
+  background: #ef4444;
+  color: #020617;
+}
+
+.delete:hover {
+  background: #dc2626;
+}
+
+/* Edit */
+.edit {
+  background: #38bdf8;
+  color: #020617;
+}
+
+.edit:hover {
+  background: #0ea5e9;
+}
