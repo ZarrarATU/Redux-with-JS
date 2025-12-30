@@ -6,6 +6,7 @@ const init = {
 }
 
 const incByAmt = createAction('account/incByAmt');
+const changeName = createAction('changeName')
 
 export const bonusSlice = createSlice({
     name: 'bonus',
@@ -20,6 +21,9 @@ export const bonusSlice = createSlice({
             if(action.payload > 100){
                 state.points += 1
             }
+        })
+        .addCase(changeName,(state,action)=>{
+            state.points += 200
         })
     }
 })

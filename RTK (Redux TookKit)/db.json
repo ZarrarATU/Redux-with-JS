@@ -1,13 +1,56 @@
 {
-    "amount":[
-        {"id": "usman", "price": 100 },
-        {"id": "hamza", "price": 200 },
-        {"id": "mahad", "price": 300 },
-        {"id": "subhan", "price": 400 }
-    ],
-    "points":[
-         {"id": "huzaif", "points": 499 },
-         {"id": "hunain", "points": 299 },
-         {"id": "ahad", "points": 999 }
+    "news": [
+        {
+            "id": 1,
+            "title": "Pakistan Launches New Digital Policy",
+            "description": "Government has announced a new digital policy to boost IT exports and startups.",
+            "content": "The new digital policy focuses on freelancing, software exports, and youth training programs across Pakistan.",
+            "category": "Technology",
+            "author": "Ahmed Raza",
+            "source": "Dawn News",
+            "image": "https://picsum.photos/600/400?random=1",
+            "publishedAt": "2025-12-26T10:30:00",
+            "views": 12540,
+            "isBreaking": true
+        },
+        {
+            "id": 2,
+            "title": "Karachi Weather Update: Heavy Rain Expected",
+            "description": "Met Office warns of heavy rainfall in Karachi over the next 48 hours.",
+            "content": "Citizens are advised to avoid unnecessary travel and follow safety guidelines issued by authorities.",
+            "category": "Weather",
+            "author": "Staff Reporter",
+            "source": "Geo News",
+            "image": "https://picsum.photos/600/400?random=2",
+            "publishedAt": "2025-12-25T18:15:00",
+            "views": 9820,
+            "isBreaking": false
+        },
+        {
+            "id": 3,
+            "title": "Pakistan Wins T20 Series Against Australia",
+            "description": "Pakistan secures series victory with an outstanding performance.",
+            "content": "The national team showed strong batting and bowling throughout the series.",
+            "category": "Sports",
+            "author": "Sports Desk",
+            "source": "ARY Sports",
+            "image": "https://picsum.photos/600/400?random=3",
+            "publishedAt": "2025-12-24T21:00:00",
+            "views": 20450,
+            "isBreaking": true
+        },
+        {
+            "id": 4,
+            "title": "New Smartphone Launched with AI Features",
+            "description": "A leading tech company has launched a smartphone powered by AI.",
+            "content": "The phone includes AI camera enhancements, smart battery optimization, and voice features.",
+            "category": "Technology",
+            "author": "Tech Team",
+            "source": "TechJuice",
+            "image": "https://picsum.photos/600/400?random=4",
+            "publishedAt": "2025-12-23T14:45:00",
+            "views": 7650,
+            "isBreaking": false
+        }
     ]
 }
