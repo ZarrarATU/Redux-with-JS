@@ -1,0 +1,69 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Wireless Bluetooth Headphones",
+      "description": "High-quality wireless headphones with noise cancellation.",
+      "price": 8999,
+      "currency": "PKR",
+      "category": "Electronics",
+      "brand": "SoundMax",
+      "rating": 4.5,
+      "stock": 25,
+      "thumbnail": "https://example.com/images/headphones.jpg",
+      "img": "https://picsum.photos/300/200"
+    },
+    {
+      "id": 2,
+      "title": "Gaming Mechanical Keyboard",
+      "description": "RGB mechanical keyboard with blue switches.",
+      "price": 12500,
+      "currency": "PKR",
+      "category": "Electronics",
+      "brand": "KeyPro",
+      "rating": 4.7,
+      "stock": 12,
+      "thumbnail": "https://example.com/images/keyboard.jpg",
+      "img": "https://picsum.photos/300/200"
+    },
+    {
+      "id": 3,
+      "title": "Men's Casual Sneakers",
+      "description": "Comfortable sneakers for daily wear.",
+      "price": 6500,
+      "currency": "PKR",
+      "category": "Fashion",
+      "brand": "UrbanStep",
+      "rating": 4.2,
+      "stock": 40,
+      "thumbnail": "https://example.com/images/shoes.jpg",
+      "img": "https://picsum.photos/300/200"
+    },
+    {
+      "id": 4,
+      "title": "Coffee Beans Premium Roast",
+      "description": "Freshly roasted premium coffee beans.",
+      "price": 3200,
+      "currency": "PKR",
+      "category": "Groceries",
+      "brand": "BrewCraft",
+      "rating": 4.8,
+      "stock": 60,
+      "thumbnail": "https://example.com/images/coffee.jpg",
+      "img": "https://picsum.photos/300/200"
+    },
+    {
+      "id": 5,
+      "title": "Face Wash for Oily Skin",
+      "description": "Dermatologically tested face wash for oily skin.",
+      "price": 1800,
+      "currency": "PKR",
+      "category": "Skincare",
+      "brand": "DermaCare",
+      "rating": 4.3,
+      "stock": 35,
+      "thumbnail": "https://example.com/images/facewash.jpg",
+      "img": "https://picsum.photos/300/200"
+    }
+  ]
+}
